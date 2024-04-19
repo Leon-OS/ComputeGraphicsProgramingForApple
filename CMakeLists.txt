@@ -40,9 +40,11 @@ endmacro()
 macro(gl_env_init_and_res target)
     gl_env_init(${target} ${ARGN})
     gl_env_resource_prepare(${target} "*.glsl")
+    gl_env_resource_prepare(${target} "*.jpg")
 endmacro(gl_env_init_and_res)
 
 
 # define macro first
 add_subdirectory(Chapter_02_opengl)
 add_subdirectory(Chapter_04_pipeline)
+add_subdirectory(Chapter_05_textures)
